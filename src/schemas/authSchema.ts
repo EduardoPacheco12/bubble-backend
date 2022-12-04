@@ -1,5 +1,5 @@
 import Joi from "joi";
-import { signInBody, signUpBody } from "../types/authTypes";
+import { signInBody, signUpBody } from "../types/authTypes.js";
 
 export const signInSchema = Joi.object<signInBody>({
   email: Joi.string().email().required(),
