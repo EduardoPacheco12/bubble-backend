@@ -8,10 +8,18 @@ export async function findEmail(email: string) {
   });
 }
 
-export async function findCategory(category: string) {
+export async function findCategoryByName(category: string) {
   return await client.category.findUnique({
     where: {
       name: category,
+    },
+  });
+}
+
+export async function findCategoryById(categoryId: number) {
+  return await client.category.findUnique({
+    where: {
+      id: categoryId,
     },
   });
 }
