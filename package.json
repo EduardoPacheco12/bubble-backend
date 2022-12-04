@@ -12,6 +12,9 @@
     "dev:seed": "dotenv -e .env.development prisma db seed",
     "dev:migration:generate": "dotenv -e .env.development prisma migrate dev"
   },
+  "prisma": {
+    "seed": "ts-node prisma/seed.ts"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
