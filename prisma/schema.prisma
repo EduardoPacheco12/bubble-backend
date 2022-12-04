@@ -12,14 +12,14 @@ datasource db {
 
 model Category {
   id   Int    @id @default(autoincrement())
-  name String
+  name String @unique
   User User[]
 }
 
 model User {
   id         Int      @id @default(autoincrement())
   name       String
-  email      String
+  email      String   @unique
   password   String
   picture    String
   category   Category @relation(fields: [categoryId], references: [id])
